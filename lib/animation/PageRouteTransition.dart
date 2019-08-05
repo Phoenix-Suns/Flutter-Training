@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+// https://flutter.dev/docs/cookbook/animation/page-route-animation
+
 class PageRouteTransition extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -29,14 +31,26 @@ Route _createRoute() {
         // ----- Tạo Animation -----
         var begin = Offset(0.0, 1.0); // bottom screen
         var end = Offset.zero;  // top screen (0.0, 0.0)
-        var tween = Tween(begin: begin, end: end);  // Single Animation
+        // var tween = Tween(begin: begin, end: end);  // Single Animation
+        // var offsetAnimation = animation.drive(tween);
 
-        
+        // Double animation (tween + curve)
+        //var curve = Curves.ease;
+        //var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+        // var offsetAnimation = animation.drive(tween);
 
-        var offsetAnimation = animation.drive(tween);
+        // Double animation - Method 2 (tween + curve)
+        var tween = Tween(begin: begin, end: end);
+        var curve = Curves.ease;
+        var curvedAnimation = CurvedAnimation(
+          parent: animation,
+          curve: curve
+        );
 
+
+        // var offsetAnimation = animation.drive(tween);
         return SlideTransition(
-          position: offsetAnimation,
+          position: tween.animate(curvedAnimation),
           child: child,);
       }
   );
