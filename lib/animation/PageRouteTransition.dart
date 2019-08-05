@@ -29,7 +29,7 @@ Route _createRoute() {
         // ----- Tạo Animation -----
         var begin = Offset(0.0, 1.0); // bottom screen
         var end = Offset.zero;  // top screen (0.0, 0.0)
-        //var tween = Tween(begin: begin, end: end);  // Single Animation
+        var tween = Tween(begin: begin, end: end);  // Single Animation
 
         
 
