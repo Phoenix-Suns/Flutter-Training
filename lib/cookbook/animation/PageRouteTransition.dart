@@ -11,11 +11,10 @@ class PageRouteTransition extends StatelessWidget {
       ),
       body: Center(
         child: RaisedButton(
-          child: Text('Go Page 2'),
-          onPressed: () {
-            Navigator.of(context).push(_createRoute());
-          }
-        ),
+            child: Text('Go Page 2'),
+            onPressed: () {
+              Navigator.of(context).push(_createRoute());
+            }),
       ),
     );
   }
@@ -26,40 +25,46 @@ Route _createRoute() {
   return PageRouteBuilder(
       pageBuilder: (context, animation, secondaryAnimation) => Page2(),
       transitionsBuilder: (context, animation, secondaryAnimation, child) {
-        //return child; // Defaut animation
+        //return child; // Defaut cookbook.animation
 
         // ----- Tạo Animation -----
         var begin = Offset(0.0, 1.0); // bottom screen
-        var end = Offset.zero;  // top screen (0.0, 0.0)
-        // var tween = Tween(begin: begin, end: end);  // Single Animation
-        // var offsetAnimation = animation.drive(tween);
+        var end = Offset.zero; // top screen (0.0, 0.0)
+        //var end = Offset(0.5, 0.5);
 
-        // Double animation (tween + curve)
+        // --- Single Animation
+        // var tween = Tween(begin: begin, end: end);
+//        var offsetAnimation = cookbook.animation.drive(tween);
+//        return SlideTransition(
+//          position: offsetAnimation,
+//          child: child,
+//        );
+
+        // --- Double cookbook.animation (tween + curve)
         //var curve = Curves.ease;
         //var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
-        // var offsetAnimation = animation.drive(tween);
+        //var offsetAnimation = cookbook.animation.drive(tween);
+        //return SlideTransition(
+//          position: offsetAnimation,
+//          child: child,
+//        );
 
-        // Double animation - Method 2 (tween + curve)
+        // --- Double cookbook.animation - Method 2 (tween + curve)
         var tween = Tween(begin: begin, end: end);
         var curve = Curves.ease;
-        var curvedAnimation = CurvedAnimation(
-          parent: animation,
-          curve: curve
-        );
+        var curvedAnimation = CurvedAnimation(parent: animation, curve: curve);
 
-
-        // var offsetAnimation = animation.drive(tween);
+        // var offsetAnimation = cookbook.animation.drive(tween);
         return SlideTransition(
           position: tween.animate(curvedAnimation),
-          child: child,);
-      }
-  );
+          child: child,
+        );
+      });
 }
 
 class Page2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         title: Text('Page 2'),

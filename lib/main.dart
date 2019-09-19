@@ -1,5 +1,9 @@
+import 'package:cookbook_animation/codelabs/LayoutBasicPage.dart';
+import 'package:cookbook_animation/codelabs/SimpleChatPage.dart';
 import 'package:flutter/material.dart';
-import 'animation/PageRouteTransition.dart';
+
+import 'codelabs/FavoriteWordListPage.dart';
+import 'codelabs/WordListPage.dart';
 
 void main() => runApp(MyApp());
 
@@ -7,26 +11,29 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Flutter Demo'),
+      routes: <String, WidgetBuilder> {
+        "layout_basic": (BuildContext context) => LayoutBasicPage(title: "Layout Basic",),
+        "first_app_1": (BuildContext context) => WordListPage(title: "Word List",),
+        "first_app_2": (BuildContext context) => FavoriteWordListPage(title: "Favorite Word List",),
+        "build_beautiful_uis": (BuildContext context) => SimpleChatPage(title: "Simple Chat",),
+      },
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
   final String title;
+  MyHomePage({Key key, this.title}) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  void _showPageRouteTransition() {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => PageRouteTransition())
-    );
+
+  void _navigateTo(String routeName){
+    Navigator.of(context).pushNamed(routeName);
   }
 
   @override
@@ -35,16 +42,27 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            RaisedButton(
-              child: Text('Animate a page route transition: Hiệu ứng Chuyển trang'),
-              onPressed: _showPageRouteTransition,
-            )
-          ],
-        ),
+      body: ListView(
+        children: <Widget>[
+          Text("Code Labs"),
+          RaisedButton(
+            onPressed: () { _navigateTo("layout_basic"); },
+            child: Text("Basic Flutter layout concepts"),
+          ),
+          RaisedButton(
+            onPressed: () { _navigateTo("first_app_1"); },
+            child: Text("Write Your First Flutter App, part 1"),
+          ),
+          RaisedButton(
+            onPressed: () { _navigateTo("first_app_2"); },
+            child: Text("Write Your First Flutter App, part 2"),
+          ),
+          RaisedButton(
+            onPressed: () { _navigateTo("build_beautiful_uis"); },
+            child: Text("Building Beautiful UIs with Flutter"),
+          ),
+          Divider()
+        ],
       ),
     );
   }
