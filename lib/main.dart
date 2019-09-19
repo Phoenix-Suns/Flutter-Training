@@ -1,4 +1,5 @@
 import 'package:cookbook_animation/codelabs/LayoutBasicPage.dart';
+import 'package:cookbook_animation/codelabs/LayoutPractice1Page.dart';
 import 'package:cookbook_animation/codelabs/SimpleChatPage.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: MyHomePage(title: 'Flutter Demo'),
       routes: <String, WidgetBuilder> {
+        "layout_practice_1": (BuildContext context) => LayoutPractice1Page(title: "Layout Practice 1",),
         "layout_basic": (BuildContext context) => LayoutBasicPage(title: "Layout Basic",),
         "first_app_1": (BuildContext context) => WordListPage(title: "Word List",),
         "first_app_2": (BuildContext context) => FavoriteWordListPage(title: "Favorite Word List",),
@@ -48,6 +50,10 @@ class _MyHomePageState extends State<MyHomePage> {
           RaisedButton(
             onPressed: () { _navigateTo("layout_basic"); },
             child: Text("Basic Flutter layout concepts"),
+          ),
+          RaisedButton(
+            onPressed: () { _navigateTo("layout_practice_1"); },
+            child: Text("Basic Flutter layout - Practice 1"),
           ),
           RaisedButton(
             onPressed: () { _navigateTo("first_app_1"); },
