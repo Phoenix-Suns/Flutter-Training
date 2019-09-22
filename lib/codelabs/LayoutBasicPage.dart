@@ -1,5 +1,3 @@
-import 'package:cookbook_animation/main.dart';
-import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 
 class LayoutBasicPage extends StatefulWidget {
@@ -108,13 +106,14 @@ class _LayoutBasicPageState extends State<LayoutBasicPage> {
         children: [
           BlueBox(),
           // 1 Flexible = Tổng Flex chia ra = remainingSpace * (flex / totalOfAllFlexValues)
+          // tight: dài hết 1/2
           Flexible(
-            fit: FlexFit.tight,
+            fit: FlexFit.loose,
             flex: 1,
             child: BlueBox(),
           ),
           Flexible(
-            fit: FlexFit.loose,
+            fit: FlexFit.tight,
             flex: 1,
             child: BlueBox(),
           ),
@@ -163,50 +162,62 @@ class _LayoutBasicPageState extends State<LayoutBasicPage> {
     );
   }
 
-  _buildText() {
+  _buildWrap() {
+    // make 50 boxs
+    List<Widget> list = new List();
+    for (int i=0; i<50; i++) {
+      list.add(BlueBox());
+    }
+
     return ColorfulContainer(
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          textBaseline: TextBaseline.alphabetic,
-          children: [
-            Text(
-              'Normal-',
-              style: TextStyle(
-                fontSize: 30,
-                fontFamily: 'Futura',
-                color: Colors.blue,
-              ),
-            ),
-            Text(
-              'Bold-',
-              style: TextStyle(
-                fontSize: 50,
-                fontFamily: 'Futura',
-                color: Colors.green,
-                fontWeight: FontWeight.bold
-              ),
-            ),
-            Text(
-              'Italic-',
-              style: TextStyle(
-                fontSize: 40,
-                fontFamily: 'Futura',
-                color: Colors.red,
-                fontStyle: FontStyle.italic
-              ),
-            ),
-            Text(
-              'Bold + Italic-',
-              style: TextStyle(
-                  fontSize: 20,
-                  fontFamily: 'Futura',
-                  color: Colors.purple,
-                  fontWeight: FontWeight.bold,
-                  fontStyle: FontStyle.italic
-              ),
-            ),
-          ],
-        )
+      child: Wrap(
+        spacing: 8.0, // gap between adjacent chips
+        runSpacing: 4.0, // gap between lines
+        children: list,
+      ),
+    );
+  }
+
+  _buildText() {
+    return Wrap(
+      children: [
+        Text(
+          'Normal-',
+          style: TextStyle(
+            fontSize: 10,
+            fontFamily: 'Futura',
+            color: Colors.blue,
+          ),
+        ),
+        Text(
+          'Bold-',
+          style: TextStyle(
+            fontSize: 20,
+            fontFamily: 'Futura',
+            color: Colors.green,
+            fontWeight: FontWeight.bold
+          ),
+        ),
+        Text(
+          'Italic-',
+          style: TextStyle(
+            fontSize: 20,
+            fontFamily: 'Futura',
+            color: Colors.red,
+            fontStyle: FontStyle.italic
+          ),
+        ),
+        Text(
+          'Bold + Italic-',
+          style: TextStyle(
+              fontSize: 20,
+              fontFamily: 'Futura',
+              color: Colors.purple,
+              fontWeight: FontWeight.bold,
+              fontStyle: FontStyle.italic
+          ),
+        ),
+      ],
     );
   }
 
@@ -317,6 +328,16 @@ class _LayoutBasicPageState extends State<LayoutBasicPage> {
                 _buildSpacer(),
                 Divider(),
 
+                HeaderText("Wrap: Wrap Children, auto enter"),
+                _buildWrap(),
+                Divider(),
+
+                RaisedButton(
+                  child: Text("Stack Page"),
+                  onPressed: () { Navigator.of(context).pushNamed("stack_layout"); }
+                ),
+                
+                
                 HeaderText("Text Widget"),
                 _buildText(),
                 Divider(),
@@ -341,8 +362,8 @@ class _LayoutBasicPageState extends State<LayoutBasicPage> {
 /// Container with Background
 class ColorfulContainer extends StatelessWidget {
   ColorfulContainer({this.child, this.height});
-  Widget child;
-  double height;
+  final Widget child;
+  final double height;
 
   @override
   Widget build(BuildContext context) {
@@ -385,7 +406,7 @@ class BiggerBlueBox extends StatelessWidget {
 
 class HeaderText extends StatelessWidget {
   HeaderText(this.text);
-  String text;
+  final String text;
 
   @override
   Widget build(BuildContext context) {

@@ -4,6 +4,7 @@ import 'package:cookbook_animation/codelabs/SimpleChatPage.dart';
 import 'package:flutter/material.dart';
 
 import 'codelabs/FavoriteWordListPage.dart';
+import 'codelabs/StackLayoutPage.dart';
 import 'codelabs/WordListPage.dart';
 
 void main() => runApp(MyApp());
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
       home: MyHomePage(title: 'Flutter Demo'),
       routes: <String, WidgetBuilder> {
         "layout_practice_1": (BuildContext context) => LayoutPractice1Page(title: "Layout Practice 1",),
+        "stack_layout": (BuildContext context) => StackLayoutPage(),
         "layout_basic": (BuildContext context) => LayoutBasicPage(title: "Layout Basic",),
         "first_app_1": (BuildContext context) => WordListPage(title: "Word List",),
         "first_app_2": (BuildContext context) => FavoriteWordListPage(title: "Favorite Word List",),
@@ -66,6 +68,10 @@ class _MyHomePageState extends State<MyHomePage> {
           RaisedButton(
             onPressed: () { _navigateTo("build_beautiful_uis"); },
             child: Text("Building Beautiful UIs with Flutter"),
+          ),
+          RaisedButton(
+            onPressed: () { _navigateTo(""); },
+            child: Text("Building a Cupertino app with Flutter"),
           ),
           Divider()
         ],
