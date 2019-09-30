@@ -1,4 +1,4 @@
-# cookbook_animation
+# flutter_training
 
 A new Flutter application.
 

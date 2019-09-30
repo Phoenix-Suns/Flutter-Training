@@ -1,4 +1,4 @@
-package com.nghialuutran.cookbook_animation
+package com.nghialuutran.flutter_training
 
 import android.os.Bundle
 
