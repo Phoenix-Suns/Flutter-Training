@@ -332,12 +332,6 @@ class _LayoutBasicPageState extends State<LayoutBasicPage> {
                 _buildWrap(),
                 Divider(),
 
-                RaisedButton(
-                  child: Text("Stack Page"),
-                  onPressed: () { Navigator.of(context).pushNamed("stack_layout"); }
-                ),
-                
-                
                 HeaderText("Text Widget"),
                 _buildText(),
                 Divider(),
@@ -349,6 +343,16 @@ class _LayoutBasicPageState extends State<LayoutBasicPage> {
                 HeaderText("Image Widget"),
                 _buildImage(),
                 Divider(),
+
+                RaisedButton(
+                  onPressed: () { Navigator.of(context).pushNamed("layout_practice_1"); },
+                  child: Text("Basic Flutter layout - Practice 1"),
+                ),
+
+                RaisedButton(
+                  onPressed: () { Navigator.of(context).pushNamed("stack_layout"); },
+                  child: Text("Stack Layout"),
+                ),
 
               ],
             ),

@@ -1,10 +1,10 @@
-import 'package:cookbook_animation/codelabs/LayoutBasicPage.dart';
-import 'package:cookbook_animation/codelabs/LayoutPractice1Page.dart';
-import 'package:cookbook_animation/codelabs/SimpleChatPage.dart';
+import 'package:flutter_training/codelabs/layout/LayoutBasicPage.dart';
+import 'package:flutter_training/codelabs/layout/LayoutPractice1Page.dart';
+import 'package:flutter_training/codelabs/SimpleChatPage.dart';
 import 'package:flutter/material.dart';
 
 import 'codelabs/FavoriteWordListPage.dart';
-import 'codelabs/StackLayoutPage.dart';
+import 'codelabs/layout/StackLayoutPage.dart';
 import 'codelabs/WordListPage.dart';
 
 void main() => runApp(MyApp());
@@ -52,10 +52,6 @@ class _MyHomePageState extends State<MyHomePage> {
           RaisedButton(
             onPressed: () { _navigateTo("layout_basic"); },
             child: Text("Basic Flutter layout concepts"),
-          ),
-          RaisedButton(
-            onPressed: () { _navigateTo("layout_practice_1"); },
-            child: Text("Basic Flutter layout - Practice 1"),
           ),
           RaisedButton(
             onPressed: () { _navigateTo("first_app_1"); },
