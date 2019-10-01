@@ -2,6 +2,11 @@ import 'package:flutter_training/codelabs/layout/LayoutBasicPage.dart';
 import 'package:flutter_training/codelabs/layout/LayoutPractice1Page.dart';
 import 'package:flutter_training/codelabs/SimpleChatPage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_training/fromOtherPlatform/fromAndroid/AddRemoveComponentPage.dart';
+import 'package:flutter_training/fromOtherPlatform/fromAndroid/AnimateWidgetPage.dart';
+import 'package:flutter_training/fromOtherPlatform/fromAndroid/DrawOnCanvasPage.dart';
+import 'package:flutter_training/fromOtherPlatform/fromAndroid/FromAndroidPage.dart';
+import 'package:flutter_training/fromOtherPlatform/fromAndroid/UpdateWidgetPage.dart';
 
 import 'codelabs/FavoriteWordListPage.dart';
 import 'codelabs/layout/StackLayoutPage.dart';
@@ -21,6 +26,12 @@ class MyApp extends StatelessWidget {
         "first_app_1": (BuildContext context) => WordListPage(title: "Word List",),
         "first_app_2": (BuildContext context) => FavoriteWordListPage(title: "Favorite Word List",),
         "build_beautiful_uis": (BuildContext context) => SimpleChatPage(title: "Simple Chat",),
+
+        "from_android": (BuildContext context) => FromAndroidPage(),
+        "update_widget": (BuildContext context) => UpdateWidgetPage(),
+        "add_remove_component": (BuildContext context) => AddRemoveComponent(),
+        "animate_widget": (BuildContext context) => AnimateWidgetPage(),
+        "draw_on_canvas": (BuildContext context) => DrawOnCanvasPage(),
       },
     );
   }
@@ -50,26 +61,32 @@ class _MyHomePageState extends State<MyHomePage> {
         children: <Widget>[
           Text("Code Labs"),
           RaisedButton(
-            onPressed: () { _navigateTo("layout_basic"); },
             child: Text("Basic Flutter layout concepts"),
+            onPressed: () { _navigateTo("layout_basic"); },
           ),
           RaisedButton(
-            onPressed: () { _navigateTo("first_app_1"); },
             child: Text("Write Your First Flutter App, part 1"),
+            onPressed: () { _navigateTo("first_app_1"); },
           ),
           RaisedButton(
-            onPressed: () { _navigateTo("first_app_2"); },
             child: Text("Write Your First Flutter App, part 2"),
+            onPressed: () { _navigateTo("first_app_2"); },
           ),
           RaisedButton(
-            onPressed: () { _navigateTo("build_beautiful_uis"); },
             child: Text("Building Beautiful UIs with Flutter"),
+            onPressed: () { _navigateTo("build_beautiful_uis"); },
           ),
           RaisedButton(
-            onPressed: () { _navigateTo(""); },
             child: Text("Building a Cupertino app with Flutter"),
+            onPressed: () { _navigateTo(""); },
           ),
-          Divider()
+          Divider(),
+
+          Text("From another platform"),
+          RaisedButton(
+            child: Text("from Android devs"),
+            onPressed: () { _navigateTo("from_android"); },
+          )
         ],
       ),
     );
