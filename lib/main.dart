@@ -5,7 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_training/fromOtherPlatform/fromAndroid/AddRemoveComponentPage.dart';
 import 'package:flutter_training/fromOtherPlatform/fromAndroid/AnimateWidgetPage.dart';
 import 'package:flutter_training/fromOtherPlatform/fromAndroid/DrawOnCanvasPage.dart';
+import 'package:flutter_training/fromOtherPlatform/fromAndroid/FetchAPIPage.dart';
 import 'package:flutter_training/fromOtherPlatform/fromAndroid/FromAndroidPage.dart';
+import 'package:flutter_training/fromOtherPlatform/fromAndroid/RouteArgumentPage.dart';
 import 'package:flutter_training/fromOtherPlatform/fromAndroid/UpdateWidgetPage.dart';
 
 import 'codelabs/FavoriteWordListPage.dart';
@@ -29,9 +31,11 @@ class MyApp extends StatelessWidget {
 
         "from_android": (BuildContext context) => FromAndroidPage(),
         "update_widget": (BuildContext context) => UpdateWidgetPage(),
-        "add_remove_component": (BuildContext context) => AddRemoveComponent(),
+        "add_remove_component": (BuildContext context) => AddRemoveComponentPage(),
         "animate_widget": (BuildContext context) => AnimateWidgetPage(),
         "draw_on_canvas": (BuildContext context) => DrawOnCanvasPage(),
+        "route_argument": (BuildContext context) => RouteArgumentPage(),
+        "fetch_api": (BuildContext context) => FetchAPIPage(),
       },
     );
   }

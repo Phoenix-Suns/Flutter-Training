@@ -33,6 +33,18 @@ class _FromAndroidPageState extends State<FromAndroidPage> {
               child: Text("Draw on Canvas?")
           ),
           CustomButton("Custom Button"),
+          RaisedButton(
+              onPressed: () {},
+              child: Text("Start Activity Android, XIB Ios, send and receive Data (Not yet)")
+          ),
+          RaisedButton(
+              onPressed: () {Navigator.of(context).pushNamed("route_argument"); },
+              child: Text("Send, Receive Route Arguments")
+          ),
+          RaisedButton(
+              onPressed: () {Navigator.of(context).pushNamed("fetch_api"); },
+              child: Text("Async UI, Fetch API")
+          ),
         ],
       ),
     );

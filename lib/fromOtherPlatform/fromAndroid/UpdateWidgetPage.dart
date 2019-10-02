@@ -1,27 +1,13 @@
 import 'package:flutter/material.dart';
 
-class UpdateWidgetPage extends StatelessWidget {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'How to update Widget',
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-      ),
-      home: UpdateWidget(),
-    );
-  }
-}
-
-class UpdateWidget extends StatefulWidget {
-  UpdateWidget({Key key}) : super(key: key);
+class UpdateWidgetPage extends StatefulWidget {
+  UpdateWidgetPage({Key key}) : super(key: key);
 
   @override
   _UpdateWidgetState createState() => _UpdateWidgetState();
 }
 
-class _UpdateWidgetState extends State<UpdateWidget> {
+class _UpdateWidgetState extends State<UpdateWidgetPage> {
   // Default placeholder text
   String textToShow = "I Like Flutter";
 
@@ -36,7 +22,7 @@ class _UpdateWidgetState extends State<UpdateWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('How to update Widget :)'),
+        title: Text('How to update Widget'),
       ),
       body: Center(child: Text(textToShow)),
 

@@ -1,27 +1,13 @@
 import 'package:flutter/material.dart';
 
-class AddRemoveComponentPage extends StatelessWidget {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Sample App',
-      theme: ThemeData(
-        primarySwatch: Colors.green,
-      ),
-      home: AddRemoveComponent(),
-    );
-  }
-}
-
-class AddRemoveComponent extends StatefulWidget {
-  AddRemoveComponent({Key key}) : super(key: key);
+class AddRemoveComponentPage extends StatefulWidget {
+  AddRemoveComponentPage({Key key}) : super(key: key);
 
   @override
   _AddRemoveComponentState createState() => _AddRemoveComponentState();
 }
 
-class _AddRemoveComponentState extends State<AddRemoveComponent> {
+class _AddRemoveComponentState extends State<AddRemoveComponentPage> {
   // Default value for toggle
   bool toggle = true;
   void _toggle() {

@@ -1,26 +1,11 @@
 import 'package:flutter/material.dart';
 
-class AnimateWidgetPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Fade Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: AnimateWidget(title: 'Fade Demo'),
-    );
-  }
-}
-
-class AnimateWidget extends StatefulWidget {
-  AnimateWidget({Key key, this.title}) : super(key: key);
-  final String title;
+class AnimateWidgetPage extends StatefulWidget {
   @override
   _AnimateWidget createState() => _AnimateWidget();
 }
 
-class _AnimateWidget extends State<AnimateWidget> with TickerProviderStateMixin {
+class _AnimateWidget extends State<AnimateWidgetPage> with TickerProviderStateMixin {
   AnimationController controller;
   CurvedAnimation curve;
 
@@ -35,7 +20,7 @@ class _AnimateWidget extends State<AnimateWidget> with TickerProviderStateMixin 
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text("Animate Widget"),
       ),
       body: Center(
           child: Container(
