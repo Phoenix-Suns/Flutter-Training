@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -12,6 +13,17 @@ class FetchAPIPage extends StatefulWidget {
 
 class _AddRemoveComponentState extends State<FetchAPIPage> {
   List items = [];
+
+  /*Future<Void> loadData() async {
+    String dataURL = "https://jsonplaceholder.typicode.com/posts";
+    http.Response response = await http.get(dataURL);
+    print(response);
+    setState(() {
+      items = json.decode(response.body);
+    });
+    return null;
+  }*/
+  // onRefresh: loadData,
 
   loadData() async {
     String dataURL = "https://jsonplaceholder.typicode.com/posts";
@@ -27,11 +39,15 @@ class _AddRemoveComponentState extends State<FetchAPIPage> {
   }
 
   _buildListView() {
-    return ListView.builder(
-        itemCount: items.length,
-        itemBuilder: (BuildContext context, int position) {
-          return _buildRow(position);
-        });
+    // Refresh
+    return RefreshIndicator(
+      onRefresh: () { return loadData(); },
+      child: ListView.builder(
+          itemCount: items.length,
+          itemBuilder: (BuildContext context, int position) {
+            return _buildRow(position);
+          }),
+    );
   }
 
   _buildBody() {
@@ -65,7 +81,7 @@ class _AddRemoveComponentState extends State<FetchAPIPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Sample App"),
+          title: Text("Fetch API"),
         ),
         body: _buildBody()
     );

@@ -2,17 +2,21 @@ import 'package:flutter_training/codelabs/layout/LayoutBasicPage.dart';
 import 'package:flutter_training/codelabs/layout/LayoutPractice1Page.dart';
 import 'package:flutter_training/codelabs/SimpleChatPage.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_training/fromOtherPlatform/fromAndroid/AddRemoveComponentPage.dart';
-import 'package:flutter_training/fromOtherPlatform/fromAndroid/AnimateWidgetPage.dart';
-import 'package:flutter_training/fromOtherPlatform/fromAndroid/DrawOnCanvasPage.dart';
-import 'package:flutter_training/fromOtherPlatform/fromAndroid/FetchAPIPage.dart';
-import 'package:flutter_training/fromOtherPlatform/fromAndroid/FromAndroidPage.dart';
-import 'package:flutter_training/fromOtherPlatform/fromAndroid/RouteArgumentPage.dart';
-import 'package:flutter_training/fromOtherPlatform/fromAndroid/UpdateWidgetPage.dart';
+import 'package:flutter_training/fromOtherPlatform/AddRemoveComponentPage.dart';
+import 'package:flutter_training/fromOtherPlatform/AnimateWidgetPage.dart';
+import 'package:flutter_training/fromOtherPlatform/DrawOnCanvasPage.dart';
+import 'package:flutter_training/fromOtherPlatform/FetchAPIPage.dart';
+import 'package:flutter_training/fromOtherPlatform/FormInputPage.dart';
+import 'package:flutter_training/fromOtherPlatform/ListViewPage.dart';
+import 'package:flutter_training/fromOtherPlatform/ResourcePage.dart';
+import 'package:flutter_training/fromOtherPlatform/RouteArgumentPage.dart';
 
 import 'codelabs/FavoriteWordListPage.dart';
 import 'codelabs/layout/StackLayoutPage.dart';
 import 'codelabs/WordListPage.dart';
+import 'fromOtherPlatform/GestureDetectionPage.dart';
+import 'fromOtherPlatform/LifecyclePage.dart';
+import 'fromOtherPlatform/UpdateWidgetPage.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,6 +24,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: MyHomePage(title: 'Flutter Demo'),
       routes: <String, WidgetBuilder> {
         "layout_practice_1": (BuildContext context) => LayoutPractice1Page(title: "Layout Practice 1",),
@@ -29,13 +34,17 @@ class MyApp extends StatelessWidget {
         "first_app_2": (BuildContext context) => FavoriteWordListPage(title: "Favorite Word List",),
         "build_beautiful_uis": (BuildContext context) => SimpleChatPage(title: "Simple Chat",),
 
-        "from_android": (BuildContext context) => FromAndroidPage(),
         "update_widget": (BuildContext context) => UpdateWidgetPage(),
         "add_remove_component": (BuildContext context) => AddRemoveComponentPage(),
         "animate_widget": (BuildContext context) => AnimateWidgetPage(),
         "draw_on_canvas": (BuildContext context) => DrawOnCanvasPage(),
         "route_argument": (BuildContext context) => RouteArgumentPage(),
         "fetch_api": (BuildContext context) => FetchAPIPage(),
+        "resource_page": (BuildContext context) => ResourcePage(),
+        "lifecycle_page": (BuildContext context) => LifecyclePage(),
+        "gesture_detection": (BuildContext context) => GestureDetectionPage(),
+        "listview_page": (BuildContext context) => ListViewPage(),
+        "form_input": (BuildContext context) => FormInputPage(),
       },
     );
   }
@@ -63,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: ListView(
         children: <Widget>[
-          Text("Code Labs"),
+          Text("Code Labs", style: Theme.of(context).textTheme.title,),
           RaisedButton(
             child: Text("Basic Flutter layout concepts"),
             onPressed: () { _navigateTo("layout_basic"); },
@@ -86,13 +95,92 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           Divider(),
 
-          Text("From another platform"),
+          Text("From another platform", style: Theme.of(context).textTheme.title),
           RaisedButton(
-            child: Text("from Android devs"),
-            onPressed: () { _navigateTo("from_android"); },
-          )
+              onPressed: () {Navigator.of(context).pushNamed("update_widget"); },
+              child: Text("Update Widget?")
+          ),
+          RaisedButton(
+              onPressed: () {Navigator.of(context).pushNamed("add_remove_component"); },
+              child: Text("Add or remove a component?")
+          ),
+          RaisedButton(
+              onPressed: () {Navigator.of(context).pushNamed("animate_widget"); },
+              child: Text("Animate Widget?")
+          ),
+          RaisedButton(
+              onPressed: () {Navigator.of(context).pushNamed("draw_on_canvas"); },
+              child: Text("Draw on Canvas?")
+          ),
+          CustomButton("Custom Button"),
+          RaisedButton(
+              onPressed: () {},
+              child: Text("(Not yet) Start Activity Android, XIB Ios, send and receive Data")
+          ),
+          RaisedButton(
+              onPressed: () {Navigator.of(context).pushNamed("route_argument"); },
+              child: Text("Send, Receive Route Arguments")
+          ),
+          RaisedButton(
+              onPressed: () {Navigator.of(context).pushNamed("fetch_api"); },
+              child: Text("Async UI, Fetch API")
+          ),
+          RaisedButton(
+              onPressed: () {Navigator.of(context).pushNamed("resource_page"); },
+              child: Text("Project Structure & Resource")
+          ),
+          RaisedButton(
+              onPressed: () {Navigator.of(context).pushNamed("lifecycle_page"); },
+              child: Text("Widget Life Cycle")
+          ),
+          RaisedButton(
+              onPressed: () {Navigator.of(context).pushNamed("gesture_detection"); },
+              child: Text("Gesture Detection")
+          ),
+          RaisedButton(
+              onPressed: () {Navigator.of(context).pushNamed("listview_page"); },
+              child: Text("ListView")
+          ),
+          RaisedButton(
+              onPressed: () {Navigator.of(context).pushNamed("form_input"); },
+              child: Text("Form Input")
+          ),
+          RaisedButton(
+              onPressed: () { },
+              child: Text("(Not yet) Flutter plugins "
+                  "- GPS "
+                  "- access the camera "
+                  "- log in with Facebook "
+                  "- Firebase "
+                  "- build custom native "
+                  "- Shared Preferences "
+                  "- SQLite "
+                  "")
+          ),
         ],
       ),
+    );
+  }
+}
+
+class CustomButton extends StatelessWidget {
+  final String label;
+
+  CustomButton(this.label);
+
+  @override
+  Widget build(BuildContext context) {
+    return FlatButton(
+        onPressed: () {},
+        child: Container(
+          child: Column(
+            children: <Widget>[
+              Icon(Icons.access_alarm),
+              Text(label),
+            ],
+          ),
+          margin: EdgeInsets.all(16),
+        )
     );
   }
 }
