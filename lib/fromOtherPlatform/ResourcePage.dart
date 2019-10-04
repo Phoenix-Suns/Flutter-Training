@@ -33,6 +33,11 @@ class _ResourcePageState extends State<ResourcePage> {
             width: 200,
             height: 200,
           ),
+          Text("Gif"),
+          Image.asset('images/giphy.gif',
+            width: 200,
+            height: 200,
+          ),
           Divider(),
 
           // ===== Font =====

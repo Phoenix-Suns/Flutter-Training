@@ -2,6 +2,12 @@ import 'package:flutter_training/codelabs/layout/LayoutBasicPage.dart';
 import 'package:flutter_training/codelabs/layout/LayoutPractice1Page.dart';
 import 'package:flutter_training/codelabs/SimpleChatPage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_training/cookbook/design/CustomThemePage.dart';
+import 'package:flutter_training/cookbook/design/DrawerMenuPage.dart';
+import 'package:flutter_training/cookbook/design/FontPage.dart';
+import 'package:flutter_training/cookbook/design/GridOrientationPage.dart';
+import 'package:flutter_training/cookbook/design/SnackBarPage.dart';
+import 'package:flutter_training/cookbook/design/TabPage.dart';
 import 'package:flutter_training/fromOtherPlatform/AddRemoveComponentPage.dart';
 import 'package:flutter_training/fromOtherPlatform/AnimateWidgetPage.dart';
 import 'package:flutter_training/fromOtherPlatform/DrawOnCanvasPage.dart';
@@ -45,6 +51,13 @@ class MyApp extends StatelessWidget {
         "gesture_detection": (BuildContext context) => GestureDetectionPage(),
         "listview_page": (BuildContext context) => ListViewPage(),
         "form_input": (BuildContext context) => FormInputPage(),
+
+        "drawer_menu": (BuildContext context) => DrawerMenuPage(),
+        "snackbar_page": (BuildContext context) => SnackBarPage(),
+        "font_page": (BuildContext context) => FontPage(),
+        "grid_orientation": (BuildContext context) => GridOrientationPage(),
+        "custom_theme": (BuildContext context) => CustomThemePage(),
+        "tab_page": (BuildContext context) => TabPage(),
       },
     );
   }
@@ -71,6 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: ListView(
+        padding: EdgeInsets.all(16.0),
         children: <Widget>[
           Text("Code Labs", style: Theme.of(context).textTheme.title,),
           RaisedButton(
@@ -93,7 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Text("Building a Cupertino app with Flutter"),
             onPressed: () { _navigateTo(""); },
           ),
-          Divider(),
+          Divider(color: Colors.red, thickness: 3.0,),
 
           Text("From another platform", style: Theme.of(context).textTheme.title),
           RaisedButton(
@@ -157,6 +171,35 @@ class _MyHomePageState extends State<MyHomePage> {
                   "- SQLite "
                   "")
           ),
+          Divider(color: Colors.red, thickness: 3.0,),
+
+          Text("Cookbook", style: Theme.of(context).textTheme.title,),
+          RaisedButton(
+              onPressed: () {Navigator.of(context).pushNamed("drawer_menu"); },
+              child: Text("Drawer Menu")
+          ),
+          RaisedButton(
+              onPressed: () {Navigator.of(context).pushNamed("snackbar_page"); },
+              child: Text("Snackbar")
+          ),
+          RaisedButton(
+              onPressed: () {Navigator.of(context).pushNamed("font_page"); },
+              child: Text("Custom Font")
+          ),
+          RaisedButton(
+              onPressed: () {Navigator.of(context).pushNamed("grid_orientation"); },
+              child: Text("Update UI base Orientation (GridView)")
+          ),
+          RaisedButton(
+              onPressed: () {Navigator.of(context).pushNamed("custom_theme"); },
+              child: Text("Custom Theme - Color + Font Style")
+          ),
+          RaisedButton(
+              onPressed: () {Navigator.of(context).pushNamed("tab_page"); },
+              child: Text("Tab")
+          ),
+          Divider(color: Colors.red, thickness: 3.0,),
+
         ],
       ),
     );
