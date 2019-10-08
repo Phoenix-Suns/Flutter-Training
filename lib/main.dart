@@ -8,6 +8,7 @@ import 'package:flutter_training/cookbook/design/FontPage.dart';
 import 'package:flutter_training/cookbook/design/GridOrientationPage.dart';
 import 'package:flutter_training/cookbook/design/SnackBarPage.dart';
 import 'package:flutter_training/cookbook/design/TabPage.dart';
+import 'package:flutter_training/cookbook/form/FormValidationPage.dart';
 import 'package:flutter_training/fromOtherPlatform/AddRemoveComponentPage.dart';
 import 'package:flutter_training/fromOtherPlatform/AnimateWidgetPage.dart';
 import 'package:flutter_training/fromOtherPlatform/DrawOnCanvasPage.dart';
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: MyHomePage(title: 'Flutter Demo'),
       routes: <String, WidgetBuilder> {
+        // Tutorial
         "layout_practice_1": (BuildContext context) => LayoutPractice1Page(title: "Layout Practice 1",),
         "stack_layout": (BuildContext context) => StackLayoutPage(),
         "layout_basic": (BuildContext context) => LayoutBasicPage(title: "Layout Basic",),
@@ -40,6 +42,7 @@ class MyApp extends StatelessWidget {
         "first_app_2": (BuildContext context) => FavoriteWordListPage(title: "Favorite Word List",),
         "build_beautiful_uis": (BuildContext context) => SimpleChatPage(title: "Simple Chat",),
 
+        // form Other Platform
         "update_widget": (BuildContext context) => UpdateWidgetPage(),
         "add_remove_component": (BuildContext context) => AddRemoveComponentPage(),
         "animate_widget": (BuildContext context) => AnimateWidgetPage(),
@@ -52,12 +55,16 @@ class MyApp extends StatelessWidget {
         "listview_page": (BuildContext context) => ListViewPage(),
         "form_input": (BuildContext context) => FormInputPage(),
 
+        // Cookbook - Design
         "drawer_menu": (BuildContext context) => DrawerMenuPage(),
         "snackbar_page": (BuildContext context) => SnackBarPage(),
         "font_page": (BuildContext context) => FontPage(),
         "grid_orientation": (BuildContext context) => GridOrientationPage(),
         "custom_theme": (BuildContext context) => CustomThemePage(),
         "tab_page": (BuildContext context) => TabPage(),
+
+        // Cookbook - Form
+        "form_validation": (BuildContext context) => FormValidationPage(),
       },
     );
   }
@@ -174,6 +181,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Divider(color: Colors.red, thickness: 3.0,),
 
           Text("Cookbook", style: Theme.of(context).textTheme.title,),
+          Text("Design", style: Theme.of(context).textTheme.subhead,),
           RaisedButton(
               onPressed: () {Navigator.of(context).pushNamed("drawer_menu"); },
               child: Text("Drawer Menu")
@@ -197,6 +205,12 @@ class _MyHomePageState extends State<MyHomePage> {
           RaisedButton(
               onPressed: () {Navigator.of(context).pushNamed("tab_page"); },
               child: Text("Tab")
+          ),
+
+          Text("Form", style: Theme.of(context).textTheme.subhead,),
+          RaisedButton(
+              onPressed: () {Navigator.of(context).pushNamed("form_validation"); },
+              child: Text("Form Validation")
           ),
           Divider(color: Colors.red, thickness: 3.0,),
 
