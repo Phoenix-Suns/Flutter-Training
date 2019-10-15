@@ -9,6 +9,11 @@ import 'package:flutter_training/cookbook/design/GridOrientationPage.dart';
 import 'package:flutter_training/cookbook/design/SnackBarPage.dart';
 import 'package:flutter_training/cookbook/design/TabPage.dart';
 import 'package:flutter_training/cookbook/form/FormValidationPage.dart';
+import 'package:flutter_training/cookbook/form/FocusPage.dart';
+import 'package:flutter_training/cookbook/form/TextFieldChangePage.dart';
+import 'package:flutter_training/cookbook/list/GridListPage.dart';
+import 'package:flutter_training/cookbook/list/HorizontalListPage.dart';
+import 'package:flutter_training/cookbook/list/SwipeItemPage.dart';
 import 'package:flutter_training/fromOtherPlatform/AddRemoveComponentPage.dart';
 import 'package:flutter_training/fromOtherPlatform/AnimateWidgetPage.dart';
 import 'package:flutter_training/fromOtherPlatform/DrawOnCanvasPage.dart';
@@ -65,6 +70,11 @@ class MyApp extends StatelessWidget {
 
         // Cookbook - Form
         "form_validation": (BuildContext context) => FormValidationPage(),
+        "textfield_change": (BuildContext context) => TextFieldChangePage(),
+        "focus_page": (BuildContext context) => FocusPage(),
+        "swipe_item": (BuildContext context) => SwipeItemPage(),
+        "grid_list": (BuildContext context) => GridListPage(),
+        "horizontal_list": (BuildContext context) => HorizontalListPage(),
       },
     );
   }
@@ -212,6 +222,32 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {Navigator.of(context).pushNamed("form_validation"); },
               child: Text("Form Validation")
           ),
+          RaisedButton(
+              onPressed: () {Navigator.of(context).pushNamed("textfield_change"); },
+              child: Text("Text Changed")
+          ),
+          RaisedButton(
+              onPressed: () {Navigator.of(context).pushNamed("focus_page"); },
+              child: Text("Focus Field")
+          ),
+          RaisedButton(
+              onPressed: () {Navigator.of(context).pushNamed("focus_page"); },
+              child: Text("Focus Field")
+          ),
+
+          Text("List", style: Theme.of(context).textTheme.subhead,),
+          RaisedButton(
+              onPressed: () {Navigator.of(context).pushNamed("swipe_item"); },
+              child: Text("Swipe Item")
+          ),
+          RaisedButton(
+              onPressed: () {Navigator.of(context).pushNamed("grid_list"); },
+              child: Text("Grid List")
+          ),
+          RaisedButton(
+              onPressed: () {Navigator.of(context).pushNamed("horizontal_list"); },
+              child: Text("Horizontal List")
+          ),
           Divider(color: Colors.red, thickness: 3.0,),
 
         ],
@@ -227,17 +263,22 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FlatButton(
-        onPressed: () {},
-        child: Container(
-          child: Column(
-            children: <Widget>[
-              Icon(Icons.access_alarm),
-              Text(label),
-            ],
-          ),
-          margin: EdgeInsets.all(16),
-        )
+    return InkWell(
+      child: Container(
+        child: Column(
+          children: <Widget>[
+            Icon(Icons.access_alarm),
+            Text(label),
+          ],
+        ),
+        margin: EdgeInsets.all(16),
+      ),
+
+      onTap: () {
+        Scaffold.of(context).showSnackBar(SnackBar(
+          content: Text('Tap'),
+        ));
+      },
     );
   }
 }

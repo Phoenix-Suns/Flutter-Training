@@ -8,14 +8,56 @@ class FormValidationPage extends StatefulWidget {
 }
 
 class _FormValidationPageState extends State<FormValidationPage> {
-  final _formKey = GlobalKey<FormState>();
+  final _formKey = GlobalKey<FormState>();  // Manage Form By Key
 
   @override
   Widget build(BuildContext context) {
     // Build a Form widget using the _formKey created above.
-    return Form(
-        key: _formKey,
-        child: Text("Nghia")// Build this out in the next steps.
+    return Scaffold(
+      appBar: AppBar(title: Text("Form"),),
+      body: Form(
+          key: _formKey,
+          child: Column(
+            children: <Widget>[
+              TextFormField(
+                // ===== The Validate Field =====
+                validator: (value) {
+                  if (value.isEmpty) {
+                    return 'Please enter some text';
+                  }
+                  return null;
+                },
+              ),
+
+              RaisedButton(
+                onPressed: () {
+                  // ===== Validate button =====
+                  if (_formKey.currentState.validate()) {
+                    // If the form is valid, display a Snackbar.
+                    Scaffold.of(context)
+                        .showSnackBar(
+                        SnackBar(content: Text('Processing Data')));
+                  }
+                },
+                child: Text('Submit'),
+              ),
+
+              // ==== Custom Text field ====
+              TextField(
+                decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: 'Custom Text Field'
+                ),
+              ),
+              TextField(
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'Custom Text Field'
+                ),
+              )
+            ],
+          ) // Build this out in the next steps.
+      ),
     );
   }
 }

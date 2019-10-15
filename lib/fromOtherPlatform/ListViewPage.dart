@@ -33,11 +33,14 @@ class _ListViewPageState extends State<ListViewPage> {
     );
   }
 
+  // Simple Item
   Widget getRow(BuildContext context, int position) {
+    final item = items[position];
+
     return InkWell(
       splashColor: Colors.red,
       child: Container(
-        child: Text("Row $position",
+        child: Text("$item",
           style: Theme.of(context).textTheme.title,
         ),
         padding: EdgeInsets.all(20.0),
@@ -48,7 +51,7 @@ class _ListViewPageState extends State<ListViewPage> {
           // Show Snackbar
           Scaffold.of(context).hideCurrentSnackBar();
           Scaffold.of(context).showSnackBar(
-            SnackBar(content: Text("Row $position",),)
+              SnackBar(content: Text("Row $position",),)
           );
         });
       },

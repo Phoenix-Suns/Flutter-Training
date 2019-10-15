@@ -1,4 +1,6 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 class ResourcePage extends StatefulWidget {
   ResourcePage({Key key}) : super(key: key);
@@ -28,17 +30,40 @@ class _ResourcePageState extends State<ResourcePage> {
             width: 200,
             height: 200,
           ),
-          Text("From Network"),
-          Image.network('https://urlzs.com/RsqCz',
-            width: 200,
-            height: 200,
-          ),
+
           Text("Gif"),
           Image.asset('images/giphy.gif',
             width: 200,
             height: 200,
           ),
+
+          Text("From Network"),
+          Image.network('https://urlzs.com/RsqCz',
+            width: 200,
+            height: 200,
+          ),
+
+          Text("From Network, Loading"),
+          Center(
+            child: Stack(
+              children: <Widget>[
+                CircularProgressIndicator(),
+                // Fade image
+                FadeInImage.memoryNetwork(
+                  placeholder: kTransparentImage,
+                  image: 'https://picsum.photos/250?image=9',
+                ),
+              ],
+            ),
+          ),
+
+          Text("Cached Image, for offline"),
+          CachedNetworkImage(
+            placeholder: (context, url) => CircularProgressIndicator(),
+            imageUrl: 'https://urlzs.com/RsqCz',
+          ),
           Divider(),
+
 
           // ===== Font =====
           Text("Font",
