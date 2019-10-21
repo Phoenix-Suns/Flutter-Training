@@ -179,13 +179,13 @@ class _MyHomePageState extends State<MyHomePage> {
           RaisedButton(
               onPressed: () { },
               child: Text("(Not yet) Flutter plugins "
-                  "- GPS "
-                  "- access the camera "
-                  "- log in with Facebook "
-                  "- Firebase "
-                  "- build custom native "
-                  "- Shared Preferences "
-                  "- SQLite "
+                  "\n- GPS "
+                  "\n- access the camera "
+                  "\n- log in with Facebook "
+                  "\n- Firebase "
+                  "\n- build custom native "
+                  "\n- Shared Preferences "
+                  "\n- SQLite "
                   "")
           ),
           Divider(color: Colors.red, thickness: 3.0,),

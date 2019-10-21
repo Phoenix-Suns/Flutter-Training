@@ -14,6 +14,7 @@ class FetchAPIPage extends StatefulWidget {
 class _AddRemoveComponentState extends State<FetchAPIPage> {
   List items = [];
 
+  //method 1 = onRefresh: loadData,
   /*Future<Void> loadData() async {
     String dataURL = "https://jsonplaceholder.typicode.com/posts";
     http.Response response = await http.get(dataURL);
@@ -23,7 +24,6 @@ class _AddRemoveComponentState extends State<FetchAPIPage> {
     });
     return null;
   }*/
-  // onRefresh: loadData,
 
   loadData() async {
     String dataURL = "https://jsonplaceholder.typicode.com/posts";
