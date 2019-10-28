@@ -13,6 +13,7 @@ import 'package:flutter_training/cookbook/form/FocusPage.dart';
 import 'package:flutter_training/cookbook/form/TextFieldChangePage.dart';
 import 'package:flutter_training/cookbook/list/GridListPage.dart';
 import 'package:flutter_training/cookbook/list/HorizontalListPage.dart';
+import 'package:flutter_training/cookbook/list/MultiTypeListPage.dart';
 import 'package:flutter_training/cookbook/list/SwipeItemPage.dart';
 import 'package:flutter_training/fromOtherPlatform/AddRemoveComponentPage.dart';
 import 'package:flutter_training/fromOtherPlatform/AnimateWidgetPage.dart';
@@ -75,6 +76,7 @@ class MyApp extends StatelessWidget {
         "swipe_item": (BuildContext context) => SwipeItemPage(),
         "grid_list": (BuildContext context) => GridListPage(),
         "horizontal_list": (BuildContext context) => HorizontalListPage(),
+        "multitype_list": (BuildContext context) => MultiTypePage(),
       },
     );
   }
@@ -247,6 +249,10 @@ class _MyHomePageState extends State<MyHomePage> {
           RaisedButton(
               onPressed: () {Navigator.of(context).pushNamed("horizontal_list"); },
               child: Text("Horizontal List")
+          ),
+          RaisedButton(
+              onPressed: () {Navigator.of(context).pushNamed("multitype_list"); },
+              child: Text("Multi Type List")
           ),
           Divider(color: Colors.red, thickness: 3.0,),
 
