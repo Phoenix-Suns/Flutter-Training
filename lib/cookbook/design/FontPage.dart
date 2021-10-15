@@ -21,7 +21,7 @@ class _FontPageState extends State<FontPage> {
 
             // ===== Font =====
             Text("Font",
-              style: Theme.of(context).textTheme.title,
+              style: Theme.of(context).textTheme.subtitle1,
             ),
             Text(
               'Normal- Tôi ngắm nhìn cơn bão, quá đẹp nhưng thật hãi hùng.',

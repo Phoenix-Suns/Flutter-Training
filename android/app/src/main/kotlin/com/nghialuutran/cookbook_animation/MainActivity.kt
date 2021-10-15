@@ -2,7 +2,7 @@ package com.nghialuutran.flutter_training
 
 import android.os.Bundle
 
-import io.flutter.app.FlutterActivity
+import embedding.android.FlutterActivity
 import io.flutter.plugins.GeneratedPluginRegistrant
 
 class MainActivity: FlutterActivity() {

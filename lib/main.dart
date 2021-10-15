@@ -105,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: ListView(
         padding: EdgeInsets.all(16.0),
         children: <Widget>[
-          Text("Code Labs", style: Theme.of(context).textTheme.title,),
+          Text("Code Labs", style: Theme.of(context).textTheme.subtitle1,),
           RaisedButton(
             child: Text("Basic Flutter layout concepts"),
             onPressed: () { _navigateTo("layout_basic"); },
@@ -128,7 +128,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           Divider(color: Colors.red, thickness: 3.0,),
 
-          Text("From another platform", style: Theme.of(context).textTheme.title),
+          Text("From another platform", style: Theme.of(context).textTheme.subtitle1),
           RaisedButton(
               onPressed: () {Navigator.of(context).pushNamed("update_widget"); },
               child: Text("Update Widget?")
@@ -192,8 +192,8 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           Divider(color: Colors.red, thickness: 3.0,),
 
-          Text("Cookbook", style: Theme.of(context).textTheme.title,),
-          Text("Design", style: Theme.of(context).textTheme.subhead,),
+          Text("Cookbook", style: Theme.of(context).textTheme.subtitle1,),
+          Text("Design", style: Theme.of(context).textTheme.headline1,),
           RaisedButton(
               onPressed: () {Navigator.of(context).pushNamed("drawer_menu"); },
               child: Text("Drawer Menu")
@@ -219,7 +219,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text("Tab")
           ),
 
-          Text("Form", style: Theme.of(context).textTheme.subhead,),
+          Text("Form", style: Theme.of(context).textTheme.headline1,),
           RaisedButton(
               onPressed: () {Navigator.of(context).pushNamed("form_validation"); },
               child: Text("Form Validation")
@@ -237,7 +237,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text("Focus Field")
           ),
 
-          Text("List", style: Theme.of(context).textTheme.subhead,),
+          Text("List", style: Theme.of(context).textTheme.headline1,),
           RaisedButton(
               onPressed: () {Navigator.of(context).pushNamed("swipe_item"); },
               child: Text("Swipe Item")

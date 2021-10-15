@@ -41,7 +41,7 @@ class _ListViewPageState extends State<ListViewPage> {
       splashColor: Colors.red,
       child: Container(
         child: Text("$item",
-          style: Theme.of(context).textTheme.title,
+          style: Theme.of(context).textTheme.subtitle1,
         ),
         padding: EdgeInsets.all(20.0),
         decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 0.3))),

@@ -174,6 +174,6 @@ class HeaderText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(this.text, style: Theme.of(context).textTheme.title,);
+    return Text(this.text, style: Theme.of(context).textTheme.subtitle1,);
   }
 }

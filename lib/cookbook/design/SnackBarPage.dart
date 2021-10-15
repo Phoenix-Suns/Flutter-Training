@@ -13,7 +13,7 @@ class _SnackBarPageState extends State<SnackBarPage> {
 
   _showSnackBar(BuildContext context) {
     var snackBar = SnackBar(
-      content: Text("I am Back", style: Theme.of(context).textTheme.display2,),
+      content: Text("I am Back", style: Theme.of(context).textTheme.bodyText2,),
       action: SnackBarAction(
         label: 'Click Again?',
         onPressed: () {

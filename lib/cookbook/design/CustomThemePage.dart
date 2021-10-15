@@ -19,9 +19,9 @@ class CustomThemePage extends StatelessWidget {
           // Define the default TextTheme. Use this to specify the default
           // text styling for headlines, titles, bodies of text, and more.
           textTheme: TextTheme(
-            headline: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
-            title: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
-            body1: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
+            headline1: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
+            subtitle1: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
+            bodyText1: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
           ),
         ),
 
@@ -49,13 +49,13 @@ class _CustomThemeState extends State<CustomTheme> {
       body: Column(
           children: <Widget>[
             Text("Simple Text"),
-            Text("Custom Headline", style: Theme.of(context).textTheme.headline,),
-            Text("Custom Title", style: Theme.of(context).textTheme.title,),
+            Text("Custom Headline", style: Theme.of(context).textTheme.headline1,),
+            Text("Custom Title", style: Theme.of(context).textTheme.subtitle1,),
 
             // ==== Apply Custom Theme and Color ====
             Container(
               color: Theme.of(context).primaryColor,
-                child: Text("Custom Body1", style: Theme.of(context).textTheme.body1,)
+                child: Text("Custom Body1", style: Theme.of(context).textTheme.bodyText1,)
             ),
           ],
       ),

@@ -24,7 +24,7 @@ class _GridListPageState extends State<GridListPage> {
           return Center(
             child: Text(
               'Item $index',
-              style: Theme.of(context).textTheme.headline,
+              style: Theme.of(context).textTheme.headline1,
             ),
           );
         }),

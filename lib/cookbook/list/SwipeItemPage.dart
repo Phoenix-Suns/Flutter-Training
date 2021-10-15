@@ -39,7 +39,7 @@ class _SwipeItemPageState extends State<SwipeItemPage> {
       splashColor: Colors.red,
       child: Container(
         child: Text("Row $position",
-          style: Theme.of(context).textTheme.title,
+          style: Theme.of(context).textTheme.subtitle1,
         ),
         padding: EdgeInsets.all(20.0),
         decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 0.3))),
@@ -64,7 +64,7 @@ class _SwipeItemPageState extends State<SwipeItemPage> {
     final itemForeground = Container(
       padding: EdgeInsets.all(20.0),
       child: Text("$item",
-        style: Theme.of(context).textTheme.title,
+        style: Theme.of(context).textTheme.subtitle1,
       ),
     );
 

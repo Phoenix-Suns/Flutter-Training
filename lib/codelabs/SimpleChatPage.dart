@@ -168,7 +168,7 @@ class ChatMessage extends StatelessWidget {
                 // Vị trí bắt đầu
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  new Text(_name, style: Theme.of(context).textTheme.subhead),
+                  new Text(_name, style: Theme.of(context).textTheme.bodyText1),
                   new Container(
                     margin: const EdgeInsets.only(top: 5.0),
                     child: new Text(text),

@@ -17,7 +17,7 @@ class _GridOrientationPageState extends State<GridOrientationPage> {
         ),
         body: Column(
           children: <Widget>[
-            Text("Let's Rotate Phone", style: Theme.of(context).textTheme.display1,),
+            Text("Let's Rotate Phone", style: Theme.of(context).textTheme.bodyText1,),
             Expanded(
 
               // ===== Rotate Screen =====
@@ -33,7 +33,7 @@ class _GridOrientationPageState extends State<GridOrientationPage> {
                       return Center(
                         child: Text(
                           'Item $index',
-                          style: Theme.of(context).textTheme.headline,
+                          style: Theme.of(context).textTheme.headline1,
                         ),
                       );
                     }),

@@ -414,21 +414,21 @@ class HeaderText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(this.text, style: Theme.of(context).textTheme.title,);
+    return Text(this.text, style: Theme.of(context).textTheme.subtitle1,);
   }
 }
 
 class BigText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Text("Big", style: Theme.of(context).textTheme.display2,);
+    return Text("Big", style: Theme.of(context).textTheme.bodyText2,);
   }
 }
 
 class MediumText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Text("Medium-qy", style: Theme.of(context).textTheme.body1,);
+    return Text("Medium-qy", style: Theme.of(context).textTheme.bodyText1,);
   }
 }
 

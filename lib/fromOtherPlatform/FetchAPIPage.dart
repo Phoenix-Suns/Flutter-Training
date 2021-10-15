@@ -27,7 +27,7 @@ class _AddRemoveComponentState extends State<FetchAPIPage> {
 
   loadData() async {
     String dataURL = "https://jsonplaceholder.typicode.com/posts";
-    http.Response response = await http.get(dataURL);
+    http.Response response = await http.get(Uri.parse(dataURL));
     print(response);
     setState(() {
       items = json.decode(response.body);
