@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class HorizontalListPage extends StatefulWidget {
-  HorizontalListPage({Key key}) : super(key: key);
+  HorizontalListPage({Key? key}) : super(key: key);
 
   @override
   _HorizontalListPageState createState() => _HorizontalListPageState();

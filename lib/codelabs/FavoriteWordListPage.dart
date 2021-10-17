@@ -2,7 +2,7 @@ import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 
 class FavoriteWordListPage extends StatefulWidget {
-  FavoriteWordListPage({Key key, this.title}) : super(key: key);
+  FavoriteWordListPage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 

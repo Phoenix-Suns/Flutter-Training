@@ -9,6 +9,7 @@ class _StackLayoutPageState extends State<StackLayoutPage> {
   _buildFit(StackFit fit) {
     return ColorfulContainer(
       height: 150,
+      width: 500,
       child: Stack(
         fit: fit,
         children: <Widget>[
@@ -23,6 +24,7 @@ class _StackLayoutPageState extends State<StackLayoutPage> {
   _buildAlign(AlignmentDirectional alignmentDirectional) {
     return ColorfulContainer(
       height: 150,
+      width: 500,
       child: Stack(
         alignment: alignmentDirectional,
         children: <Widget>[
@@ -37,6 +39,7 @@ class _StackLayoutPageState extends State<StackLayoutPage> {
   _buildPosition(double top, double bottom, double left, double right) {
     return ColorfulContainer(
       height: 150,
+      width: 500,
       child: Stack(
         children: <Widget>[
           Positioned(child: GreenBox(),
@@ -106,7 +109,7 @@ class _StackLayoutPageState extends State<StackLayoutPage> {
 
 /// Container with Background
 class ColorfulContainer extends StatelessWidget {
-  ColorfulContainer({this.child, this.height, this.width});
+  ColorfulContainer({required this.child, required this.height, required this.width});
   final Widget child;
   final double height;
   final double width;

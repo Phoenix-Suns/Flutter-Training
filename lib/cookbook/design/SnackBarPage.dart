@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SnackBarPage extends StatefulWidget {
-  SnackBarPage({Key key}) : super(key: key);
+  SnackBarPage({Key? key}) : super(key: key);
 
   @override
   _SnackBarPageState createState() => _SnackBarPageState();

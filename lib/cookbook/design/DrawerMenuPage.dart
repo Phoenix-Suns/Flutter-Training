@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 // https://flutter.dev/docs/cookbook/design/drawer
 class DrawerMenuPage extends StatefulWidget {
-  DrawerMenuPage({Key key}) : super(key: key);
+  DrawerMenuPage({Key? key}) : super(key: key);
 
   @override
   _DrawerMenuPageState createState() => _DrawerMenuPageState();
@@ -54,7 +54,7 @@ class _DrawerMenuPageState extends State<DrawerMenuPage> {
       body: Center(
         child: RaisedButton(
           child: Text("Open Drawer"),
-          onPressed: () { _scaffoldKey.currentState.openDrawer(); },
+          onPressed: () { _scaffoldKey.currentState?.openDrawer(); },
         ),
       ),
     );

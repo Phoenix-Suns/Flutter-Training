@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class FormInputPage extends StatefulWidget {
-  FormInputPage({Key key}) : super(key: key);
+  FormInputPage({Key? key}) : super(key: key);
 
   @override
   _FormInputPageState createState() => _FormInputPageState();
 }
 
 class _FormInputPageState extends State<FormInputPage> {
-  String _errorText;
+  String? _errorText;
 
   _getErrorText() {
     return _errorText;

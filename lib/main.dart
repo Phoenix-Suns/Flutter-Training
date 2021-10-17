@@ -1,28 +1,28 @@
-import 'package:flutter_training/codelabs/layout/LayoutBasicPage.dart';
-import 'package:flutter_training/codelabs/layout/LayoutPractice1Page.dart';
-import 'package:flutter_training/codelabs/SimpleChatPage.dart';
+import 'package:flutterTraining/codelabs/layout/LayoutBasicPage.dart';
+import 'package:flutterTraining/codelabs/layout/LayoutPractice1Page.dart';
+import 'package:flutterTraining/codelabs/SimpleChatPage.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_training/cookbook/design/CustomThemePage.dart';
-import 'package:flutter_training/cookbook/design/DrawerMenuPage.dart';
-import 'package:flutter_training/cookbook/design/FontPage.dart';
-import 'package:flutter_training/cookbook/design/GridOrientationPage.dart';
-import 'package:flutter_training/cookbook/design/SnackBarPage.dart';
-import 'package:flutter_training/cookbook/design/TabPage.dart';
-import 'package:flutter_training/cookbook/form/FormValidationPage.dart';
-import 'package:flutter_training/cookbook/form/FocusPage.dart';
-import 'package:flutter_training/cookbook/form/TextFieldChangePage.dart';
-import 'package:flutter_training/cookbook/list/GridListPage.dart';
-import 'package:flutter_training/cookbook/list/HorizontalListPage.dart';
-import 'package:flutter_training/cookbook/list/MultiTypeListPage.dart';
-import 'package:flutter_training/cookbook/list/SwipeItemPage.dart';
-import 'package:flutter_training/fromOtherPlatform/AddRemoveComponentPage.dart';
-import 'package:flutter_training/fromOtherPlatform/AnimateWidgetPage.dart';
-import 'package:flutter_training/fromOtherPlatform/DrawOnCanvasPage.dart';
-import 'package:flutter_training/fromOtherPlatform/FetchAPIPage.dart';
-import 'package:flutter_training/fromOtherPlatform/FormInputPage.dart';
-import 'package:flutter_training/fromOtherPlatform/ListViewPage.dart';
-import 'package:flutter_training/fromOtherPlatform/ResourcePage.dart';
-import 'package:flutter_training/fromOtherPlatform/RouteArgumentPage.dart';
+import 'package:flutterTraining/cookbook/design/CustomThemePage.dart';
+import 'package:flutterTraining/cookbook/design/DrawerMenuPage.dart';
+import 'package:flutterTraining/cookbook/design/FontPage.dart';
+import 'package:flutterTraining/cookbook/design/GridOrientationPage.dart';
+import 'package:flutterTraining/cookbook/design/SnackBarPage.dart';
+import 'package:flutterTraining/cookbook/design/TabPage.dart';
+import 'package:flutterTraining/cookbook/form/FormValidationPage.dart';
+import 'package:flutterTraining/cookbook/form/FocusPage.dart';
+import 'package:flutterTraining/cookbook/form/TextFieldChangePage.dart';
+import 'package:flutterTraining/cookbook/list/GridListPage.dart';
+import 'package:flutterTraining/cookbook/list/HorizontalListPage.dart';
+import 'package:flutterTraining/cookbook/list/MultiTypeListPage.dart';
+import 'package:flutterTraining/cookbook/list/SwipeItemPage.dart';
+import 'package:flutterTraining/fromOtherPlatform/AddRemoveComponentPage.dart';
+import 'package:flutterTraining/fromOtherPlatform/AnimateWidgetPage.dart';
+import 'package:flutterTraining/fromOtherPlatform/DrawOnCanvasPage.dart';
+import 'package:flutterTraining/fromOtherPlatform/FetchAPIPage.dart';
+import 'package:flutterTraining/fromOtherPlatform/FormInputPage.dart';
+import 'package:flutterTraining/fromOtherPlatform/ListViewPage.dart';
+import 'package:flutterTraining/fromOtherPlatform/ResourcePage.dart';
+import 'package:flutterTraining/fromOtherPlatform/RouteArgumentPage.dart';
 
 import 'codelabs/FavoriteWordListPage.dart';
 import 'codelabs/layout/StackLayoutPage.dart';
@@ -84,7 +84,7 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   final String title;
-  MyHomePage({Key key, this.title}) : super(key: key);
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();

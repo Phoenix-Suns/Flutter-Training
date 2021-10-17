@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FocusPage extends StatefulWidget {
-  FocusPage({Key key}) : super(key: key);
+  FocusPage({Key? key}) : super(key: key);
 
   @override
   _FocusPageState createState() => _FocusPageState();
@@ -9,7 +9,7 @@ class FocusPage extends StatefulWidget {
 
 class _FocusPageState extends State<FocusPage> {
 
-  FocusNode myFocusNode;
+  FocusNode? myFocusNode;
 
   @override
   void initState() {
@@ -22,7 +22,7 @@ class _FocusPageState extends State<FocusPage> {
   @override
   void dispose() {
     // Clear Focus
-    myFocusNode.dispose();
+    myFocusNode?.dispose();
 
     super.dispose();
   }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class LayoutBasicPage extends StatefulWidget {
-  LayoutBasicPage({Key key, this.title}) : super(key: key);
+  LayoutBasicPage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -164,7 +164,7 @@ class _LayoutBasicPageState extends State<LayoutBasicPage> {
 
   _buildWrap() {
     // make 50 boxs
-    List<Widget> list = new List();
+    List<Widget> list = [];
     for (int i=0; i<50; i++) {
       list.add(BlueBox());
     }
@@ -366,8 +366,8 @@ class _LayoutBasicPageState extends State<LayoutBasicPage> {
 /// Container with Background
 class ColorfulContainer extends StatelessWidget {
   ColorfulContainer({this.child, this.height});
-  final Widget child;
-  final double height;
+  final Widget? child;
+  final double? height;
 
   @override
   Widget build(BuildContext context) {

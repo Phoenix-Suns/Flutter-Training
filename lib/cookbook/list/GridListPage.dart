@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class GridListPage extends StatefulWidget {
-  GridListPage({Key key}) : super(key: key);
+  GridListPage({Key? key}) : super(key: key);
 
   @override
   _GridListPageState createState() => _GridListPageState();

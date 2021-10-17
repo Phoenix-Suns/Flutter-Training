@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SwipeItemPage extends StatefulWidget {
-  SwipeItemPage({Key key}) : super(key: key);
+  SwipeItemPage({Key? key}) : super(key: key);
 
   @override
   _SwipeItemPageState createState() => _SwipeItemPageState();

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class RouteArgumentPage extends StatefulWidget {
-  RouteArgumentPage({Key key}) : super(key: key);
+  RouteArgumentPage({Key? key}) : super(key: key);
 
   @override
   _RouteArgumentState createState() => _RouteArgumentState();
@@ -89,7 +89,7 @@ class ChildPage extends StatefulWidget {
   // 1.1
   /*final MyArguments receiveMessage;
   ChildPage({Key key, this.receiveMessage}) : super(key: key);*/
-  ChildPage({Key key}) : super(key: key);
+  ChildPage({Key? key}) : super(key: key);
 
   @override
   _ChildPageState createState() => _ChildPageState();
@@ -113,7 +113,7 @@ class _ChildPageState extends State<ChildPage> {
     // _receiveMessage = widget.receiveMessage;
 
     // 1 ===== Receive Argument ======
-    _receiveMessage = ModalRoute.of(context).settings.arguments;
+    _receiveMessage = ModalRoute.of(context)?.settings?.arguments as MyArguments;
 
     return Scaffold(
       appBar: AppBar(

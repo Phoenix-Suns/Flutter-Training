@@ -32,7 +32,7 @@ class CustomThemePage extends StatelessWidget {
 }
 
 class CustomTheme extends StatefulWidget {
-  CustomTheme({Key key}) : super(key: key);
+  CustomTheme({Key? key}) : super(key: key);
 
   @override
   _CustomThemeState createState() => _CustomThemeState();

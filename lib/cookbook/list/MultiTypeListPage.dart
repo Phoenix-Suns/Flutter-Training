@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MultiTypePage extends StatefulWidget {
-  MultiTypePage({Key key}) : super(key: key);
+  MultiTypePage({Key? key}) : super(key: key);
 
   @override
   _MultiTypePageState createState() => _MultiTypePageState();

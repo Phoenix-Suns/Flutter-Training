@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FontPage extends StatefulWidget {
-  FontPage({Key key}) : super(key: key);
+  FontPage({Key? key}) : super(key: key);
 
   @override
   _FontPageState createState() => _FontPageState();

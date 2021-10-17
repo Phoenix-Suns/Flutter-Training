@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AddRemoveComponentPage extends StatefulWidget {
-  AddRemoveComponentPage({Key key}) : super(key: key);
+  AddRemoveComponentPage({Key? key}) : super(key: key);
 
   @override
   _AddRemoveComponentState createState() => _AddRemoveComponentState();

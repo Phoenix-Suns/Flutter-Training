@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FormValidationPage extends StatefulWidget {
-  FormValidationPage({Key key}) : super(key: key);
+  FormValidationPage({Key? key}) : super(key: key);
 
   @override
   _FormValidationPageState createState() => _FormValidationPageState();
@@ -22,7 +22,7 @@ class _FormValidationPageState extends State<FormValidationPage> {
               TextFormField(
                 // ===== The Validate Field =====
                 validator: (value) {
-                  if (value.isEmpty) {
+                  if (value?.isEmpty == true) {
                     return 'Please enter some text';
                   }
                   return null;
@@ -32,7 +32,7 @@ class _FormValidationPageState extends State<FormValidationPage> {
               RaisedButton(
                 onPressed: () {
                   // ===== Validate button =====
-                  if (_formKey.currentState.validate()) {
+                  if (_formKey.currentState?.validate() == true) {
                     // If the form is valid, display a Snackbar.
                     Scaffold.of(context)
                         .showSnackBar(

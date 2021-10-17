@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ListViewPage extends StatefulWidget {
-  ListViewPage({Key key}) : super(key: key);
+  ListViewPage({Key? key}) : super(key: key);
 
   @override
   _ListViewPageState createState() => _ListViewPageState();

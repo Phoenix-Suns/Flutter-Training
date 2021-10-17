@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class LayoutPractice1Page extends StatefulWidget {
-  LayoutPractice1Page({Key key, this.title}) : super(key: key);
+  LayoutPractice1Page({Key? key, required this.title}) : super(key: key);
 
   final String title;
 

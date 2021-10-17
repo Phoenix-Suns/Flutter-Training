@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 
 class SimpleChatPage extends StatefulWidget {
-  SimpleChatPage({Key key, this.title}) : super(key: key);
+  SimpleChatPage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -123,7 +123,7 @@ class _SimpleChatPageState extends State<SimpleChatPage> with TickerProviderStat
         decoration: Theme.of(context).platform == TargetPlatform.iOS
             ? new BoxDecoration(
             border: new Border(
-                top: new BorderSide(color: Colors.grey[200])
+                top: new BorderSide(color: Colors.blue)
             )
         )
             : null,
@@ -140,7 +140,7 @@ class ChatMessage extends StatelessWidget {
   final String text;
   final AnimationController animationController;
 
-  ChatMessage({this.text, this.animationController});
+  ChatMessage({required this.text, required this.animationController});
 
   @override
   Widget build(BuildContext context) {

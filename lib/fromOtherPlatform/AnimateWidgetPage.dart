@@ -6,8 +6,8 @@ class AnimateWidgetPage extends StatefulWidget {
 }
 
 class _AnimateWidget extends State<AnimateWidgetPage> with TickerProviderStateMixin {
-  AnimationController controller;
-  CurvedAnimation curve;
+  late AnimationController controller;
+  late CurvedAnimation curve;
 
   @override
   void initState() {

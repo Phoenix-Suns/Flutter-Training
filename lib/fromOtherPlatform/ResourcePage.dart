@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class ResourcePage extends StatefulWidget {
-  ResourcePage({Key key}) : super(key: key);
+  ResourcePage({Key? key}) : super(key: key);
 
   @override
   _ResourcePageState createState() => _ResourcePageState();

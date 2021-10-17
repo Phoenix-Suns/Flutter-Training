@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class GridOrientationPage extends StatefulWidget {
-  GridOrientationPage({Key key}) : super(key: key);
+  GridOrientationPage({Key? key}) : super(key: key);
 
   @override
   _GridOrientationPageState createState() => _GridOrientationPageState();

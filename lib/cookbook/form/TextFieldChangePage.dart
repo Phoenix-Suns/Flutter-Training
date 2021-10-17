@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TextFieldChangePage extends StatefulWidget {
-  TextFieldChangePage({Key key}) : super(key: key);
+  TextFieldChangePage({Key? key}) : super(key: key);
 
   @override
   _TextFieldChangePageState createState() => _TextFieldChangePageState();

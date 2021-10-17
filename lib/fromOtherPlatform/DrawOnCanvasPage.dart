@@ -14,13 +14,12 @@ class DrawOnCanvasState extends State<DrawOnCanvas> {
     return GestureDetector(
       onPanUpdate: (DragUpdateDetails details) {
         setState(() {
-          RenderBox referenceBox = context.findRenderObject();
-          Offset localPosition =
-          referenceBox.globalToLocal(details.globalPosition);
+          RenderBox referenceBox = context.findRenderObject() as RenderBox;
+          Offset localPosition = referenceBox.globalToLocal(details.globalPosition);
           _points = List.from(_points)..add(localPosition);
         });
       },
-      onPanEnd: (DragEndDetails details) => _points.add(null),
+      onPanEnd: (DragEndDetails details) => _points.add(Offset.zero),
       child: CustomPaint(painter: SignaturePainter(_points), size: Size.infinite),
     );
   }

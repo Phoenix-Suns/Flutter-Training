@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 // https://medium.com/flutteropen/flutter-widgets-12-tabbarview-tabbar-4cdc2112991a
 // https://flutter.dev/docs/cookbook/design/tabs
 class TabPage extends StatefulWidget {
-  TabPage({Key key}) : super(key: key);
+  TabPage({Key? key}) : super(key: key);
 
   @override
   _TabPageState createState() => _TabPageState();

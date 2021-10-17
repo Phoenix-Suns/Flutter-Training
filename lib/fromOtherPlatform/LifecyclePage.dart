@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 
 class LifecyclePage extends StatefulWidget {
-  LifecyclePage({Key key}) : super(key: key);
+  LifecyclePage({Key? key}) : super(key: key);
 
   @override
   _LifecyclePageState createState() => _LifecyclePageState();
 }
 
 class _LifecyclePageState extends State<LifecyclePage> with WidgetsBindingObserver {
-  AppLifecycleState _lastLifecycleState;
+  AppLifecycleState? _lastLifecycleState;
 
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addObserver(this);
+    WidgetsBinding.instance?.addObserver(this);
   }
 
   @override
   void dispose() {
-    WidgetsBinding.instance.removeObserver(this);
+    WidgetsBinding.instance?.removeObserver(this);
     super.dispose();
   }
 

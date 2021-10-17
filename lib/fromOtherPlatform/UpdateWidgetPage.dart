@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class UpdateWidgetPage extends StatefulWidget {
-  UpdateWidgetPage({Key key}) : super(key: key);
+  UpdateWidgetPage({Key? key}) : super(key: key);
 
   @override
   _UpdateWidgetState createState() => _UpdateWidgetState();
