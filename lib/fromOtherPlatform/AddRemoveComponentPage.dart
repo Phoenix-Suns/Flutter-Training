@@ -20,7 +20,7 @@ class _AddRemoveComponentState extends State<AddRemoveComponentPage> {
     if (toggle) {
       return Text('Toggle One');
     } else {
-      return RaisedButton(onPressed: () {}, child: Text('Toggle Two'));
+      return ElevatedButton(onPressed: () {}, child: Text('Toggle Two'));
     }
   }
 

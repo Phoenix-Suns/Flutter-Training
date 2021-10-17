@@ -42,7 +42,7 @@ class _FocusPageState extends State<FocusPage> {
           TextField(
             focusNode: myFocusNode,
           ),
-          RaisedButton(
+          ElevatedButton(
             child: Text("Focus second Field"),
             onPressed: () => FocusScope.of(context).requestFocus(myFocusNode),
           )

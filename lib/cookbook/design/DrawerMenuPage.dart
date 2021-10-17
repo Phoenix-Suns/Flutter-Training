@@ -52,7 +52,7 @@ class _DrawerMenuPageState extends State<DrawerMenuPage> {
       ),
 
       body: Center(
-        child: RaisedButton(
+        child: ElevatedButton(
           child: Text("Open Drawer"),
           onPressed: () { _scaffoldKey.currentState?.openDrawer(); },
         ),

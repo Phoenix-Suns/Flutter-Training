@@ -35,7 +35,7 @@ class _SnackBarPageState extends State<SnackBarPage> {
       ),
       body: Center(
         child: Builder(
-          builder: (context) => RaisedButton(
+          builder: (context) => ElevatedButton(
             child: Text("Show Snackbar"),
             onPressed: () {
               _showSnackBar(context);

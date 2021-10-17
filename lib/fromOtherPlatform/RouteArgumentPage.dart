@@ -61,7 +61,7 @@ class _RouteArgumentState extends State<RouteArgumentPage> {
                 hintText: "What do you want to send"
               ),
             ),
-            RaisedButton(
+            ElevatedButton(
               onPressed: () {this._gotoChild(context);},
               child: Text("Send Message >>"),
             ),
@@ -138,7 +138,7 @@ class _ChildPageState extends State<ChildPage> {
                   ),
               ),
             ),
-            RaisedButton(
+            ElevatedButton(
               onPressed: () {this._gotoChild();},
               child: Text("<< Send Back"),
             )

@@ -10,7 +10,7 @@ class PageRouteTransition extends StatelessWidget {
         title: Text('PageRouteTransition'),
       ),
       body: Center(
-        child: RaisedButton(
+        child: ElevatedButton(
             child: Text('Go Page 2'),
             onPressed: () {
               Navigator.of(context).push(_createRoute());

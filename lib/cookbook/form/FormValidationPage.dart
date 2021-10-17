@@ -29,7 +29,7 @@ class _FormValidationPageState extends State<FormValidationPage> {
                 },
               ),
 
-              RaisedButton(
+              ElevatedButton(
                 onPressed: () {
                   // ===== Validate button =====
                   if (_formKey.currentState?.validate() == true) {

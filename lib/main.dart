@@ -106,79 +106,79 @@ class _MyHomePageState extends State<MyHomePage> {
         padding: EdgeInsets.all(16.0),
         children: <Widget>[
           Text("Code Labs", style: Theme.of(context).textTheme.subtitle1,),
-          RaisedButton(
+          ElevatedButton(
             child: Text("Basic Flutter layout concepts"),
             onPressed: () { _navigateTo("layout_basic"); },
           ),
-          RaisedButton(
+          ElevatedButton(
             child: Text("Write Your First Flutter App, part 1"),
             onPressed: () { _navigateTo("first_app_1"); },
           ),
-          RaisedButton(
+          ElevatedButton(
             child: Text("Write Your First Flutter App, part 2"),
             onPressed: () { _navigateTo("first_app_2"); },
           ),
-          RaisedButton(
+          ElevatedButton(
             child: Text("Building Beautiful UIs with Flutter"),
             onPressed: () { _navigateTo("build_beautiful_uis"); },
           ),
-          RaisedButton(
+          ElevatedButton(
             child: Text("Building a Cupertino app with Flutter"),
             onPressed: () { _navigateTo(""); },
           ),
           Divider(color: Colors.red, thickness: 3.0,),
 
           Text("From another platform", style: Theme.of(context).textTheme.subtitle1),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("update_widget"); },
               child: Text("Update Widget?")
           ),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("add_remove_component"); },
               child: Text("Add or remove a component?")
           ),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("animate_widget"); },
               child: Text("Animate Widget?")
           ),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("draw_on_canvas"); },
               child: Text("Draw on Canvas?")
           ),
           CustomButton("Custom Button"),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {},
               child: Text("(Not yet) Start Activity Android, XIB Ios, send and receive Data")
           ),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("route_argument"); },
               child: Text("Send, Receive Route Arguments")
           ),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("fetch_api"); },
               child: Text("Async UI, Fetch API")
           ),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("resource_page"); },
               child: Text("Project Structure & Resource")
           ),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("lifecycle_page"); },
               child: Text("Widget Life Cycle")
           ),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("gesture_detection"); },
               child: Text("Gesture Detection")
           ),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("listview_page"); },
               child: Text("ListView")
           ),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("form_input"); },
               child: Text("Form Input")
           ),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () { },
               child: Text("(Not yet) Flutter plugins "
                   "\n- GPS "
@@ -194,63 +194,63 @@ class _MyHomePageState extends State<MyHomePage> {
 
           Text("Cookbook", style: Theme.of(context).textTheme.subtitle1,),
           Text("Design", style: Theme.of(context).textTheme.headline1,),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("drawer_menu"); },
               child: Text("Drawer Menu")
           ),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("snackbar_page"); },
               child: Text("Snackbar")
           ),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("font_page"); },
               child: Text("Custom Font")
           ),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("grid_orientation"); },
               child: Text("Update UI base Orientation (GridView)")
           ),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("custom_theme"); },
               child: Text("Custom Theme - Color + Font Style")
           ),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("tab_page"); },
               child: Text("Tab")
           ),
 
           Text("Form", style: Theme.of(context).textTheme.headline1,),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("form_validation"); },
               child: Text("Form Validation")
           ),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("textfield_change"); },
               child: Text("Text Changed")
           ),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("focus_page"); },
               child: Text("Focus Field")
           ),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("focus_page"); },
               child: Text("Focus Field")
           ),
 
           Text("List", style: Theme.of(context).textTheme.headline1,),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("swipe_item"); },
               child: Text("Swipe Item")
           ),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("grid_list"); },
               child: Text("Grid List")
           ),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("horizontal_list"); },
               child: Text("Horizontal List")
           ),
-          RaisedButton(
+          ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("multitype_list"); },
               child: Text("Multi Type List")
           ),
