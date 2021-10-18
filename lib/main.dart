@@ -193,7 +193,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Divider(color: Colors.red, thickness: 3.0,),
 
           Text("Cookbook", style: Theme.of(context).textTheme.subtitle1,),
-          Text("Design", style: Theme.of(context).textTheme.headline1,),
+          Text("Design", style: Theme.of(context).textTheme.headline6,),
           ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("drawer_menu"); },
               child: Text("Drawer Menu")
@@ -219,7 +219,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text("Tab")
           ),
 
-          Text("Form", style: Theme.of(context).textTheme.headline1,),
+          Text("Form", style: Theme.of(context).textTheme.headline6,),
           ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("form_validation"); },
               child: Text("Form Validation")
@@ -237,7 +237,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text("Focus Field")
           ),
 
-          Text("List", style: Theme.of(context).textTheme.headline1,),
+          Text("List", style: Theme.of(context).textTheme.headline6,),
           ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("swipe_item"); },
               child: Text("Swipe Item")
@@ -281,7 +281,7 @@ class CustomButton extends StatelessWidget {
       ),
 
       onTap: () {
-        Scaffold.of(context).showSnackBar(SnackBar(
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
           content: Text('Tap'),
         ));
       },

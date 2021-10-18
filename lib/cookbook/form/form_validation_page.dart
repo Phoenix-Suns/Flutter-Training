@@ -34,9 +34,7 @@ class _FormValidationPageState extends State<FormValidationPage> {
                   // ===== Validate button =====
                   if (_formKey.currentState?.validate() == true) {
                     // If the form is valid, display a Snackbar.
-                    Scaffold.of(context)
-                        .showSnackBar(
-                        SnackBar(content: Text('Processing Data')));
+                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Processing Data")));
                   }
                 },
                 child: Text('Submit'),

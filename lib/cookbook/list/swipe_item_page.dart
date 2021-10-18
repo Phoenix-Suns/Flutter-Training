@@ -48,7 +48,7 @@ class _SwipeItemPageState extends State<SwipeItemPage> {
         setState(() {
           // Show Snackbar
           Scaffold.of(context).hideCurrentSnackBar();
-          Scaffold.of(context).showSnackBar(
+          ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(content: Text("Row $position",),)
           );
         });
@@ -82,7 +82,7 @@ class _SwipeItemPageState extends State<SwipeItemPage> {
         setState(() {
           // Show Snackbar
           Scaffold.of(context).hideCurrentSnackBar();
-          Scaffold.of(context).showSnackBar(
+          ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(content: Text("Row $position",),)
           );
         });
@@ -104,7 +104,7 @@ class _SwipeItemPageState extends State<SwipeItemPage> {
               items.removeAt(position);
             });
 
-            Scaffold.of(context).showSnackBar(SnackBar(content: Text("Removed $item")));
+            ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Removed $item")));
           },
         ),
       ),
