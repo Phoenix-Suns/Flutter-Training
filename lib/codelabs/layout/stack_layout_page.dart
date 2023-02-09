@@ -53,7 +53,7 @@ class _StackLayoutPageState extends State<StackLayoutPage> {
     );
   }
 
-  _buildOverflow(Overflow overflow) {
+  _buildOverflow(Clip clipBehavior) {
     return ColorfulContainer(
       height: 50,
       width: 50,
@@ -64,7 +64,7 @@ class _StackLayoutPageState extends State<StackLayoutPage> {
             right: 100,
           ),
         ],
-        overflow: overflow,
+        clipBehavior: clipBehavior,
       ),
     );
   }
@@ -94,11 +94,11 @@ class _StackLayoutPageState extends State<StackLayoutPage> {
             _buildPosition(10, 20, 30, 50),
             Divider(),
 
-            HeaderText("Overflow"),
-            Text("Overflow.visible"),
-            _buildOverflow(Overflow.visible),
-            Text("Overflow.clip"),
-            _buildOverflow(Overflow.clip),
+            HeaderText("Clip"),
+            Text("Clip.none"),
+            _buildOverflow(Clip.none),
+            Text("Clip.hardEdge"),
+            _buildOverflow(Clip.hardEdge),
             Divider(),
           ]
         ),

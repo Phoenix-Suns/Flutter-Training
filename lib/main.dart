@@ -1,28 +1,28 @@
-import 'package:flutterTraining/codelabs/layout/layout_basic_page.dart';
-import 'package:flutterTraining/codelabs/layout/layout_practice1_page.dart';
-import 'package:flutterTraining/codelabs/simple_chat_page.dart';
+import 'package:flutter_training/codelabs/layout/layout_basic_page.dart';
+import 'package:flutter_training/codelabs/layout/layout_practice1_page.dart';
+import 'package:flutter_training/codelabs/simple_chat_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutterTraining/cookbook/design/custom_theme_page.dart';
-import 'package:flutterTraining/cookbook/design/drawer_menu_page.dart';
-import 'package:flutterTraining/cookbook/design/font_page.dart';
-import 'package:flutterTraining/cookbook/design/grid_orientation_page.dart';
-import 'package:flutterTraining/cookbook/design/snackbar_page.dart';
-import 'package:flutterTraining/cookbook/design/tab_page.dart';
-import 'package:flutterTraining/cookbook/form/form_validation_page.dart';
-import 'package:flutterTraining/cookbook/form/focus_page.dart';
-import 'package:flutterTraining/cookbook/form/textfield_change_page.dart';
-import 'package:flutterTraining/cookbook/list/grid_list_page.dart';
-import 'package:flutterTraining/cookbook/list/horizontal_list_page.dart';
-import 'package:flutterTraining/cookbook/list/multi_type_list_page.dart';
-import 'package:flutterTraining/cookbook/list/swipe_item_page.dart';
-import 'package:flutterTraining/fromOtherPlatform/add_remove_component_page.dart';
-import 'package:flutterTraining/fromOtherPlatform/animate_widget_page.dart';
-import 'package:flutterTraining/fromOtherPlatform/draw_on_canvas_page.dart';
-import 'package:flutterTraining/fromOtherPlatform/fetch_api_page.dart';
-import 'package:flutterTraining/fromOtherPlatform/form_input_page.dart';
-import 'package:flutterTraining/fromOtherPlatform/listview_page.dart';
-import 'package:flutterTraining/fromOtherPlatform/resource_page.dart';
-import 'package:flutterTraining/fromOtherPlatform/route_argument_page.dart';
+import 'package:flutter_training/cookbook/design/custom_theme_page.dart';
+import 'package:flutter_training/cookbook/design/drawer_menu_page.dart';
+import 'package:flutter_training/cookbook/design/font_page.dart';
+import 'package:flutter_training/cookbook/design/grid_orientation_page.dart';
+import 'package:flutter_training/cookbook/design/snackbar_page.dart';
+import 'package:flutter_training/cookbook/design/tab_page.dart';
+import 'package:flutter_training/cookbook/form/form_validation_page.dart';
+import 'package:flutter_training/cookbook/form/focus_page.dart';
+import 'package:flutter_training/cookbook/form/textfield_change_page.dart';
+import 'package:flutter_training/cookbook/list/grid_list_page.dart';
+import 'package:flutter_training/cookbook/list/horizontal_list_page.dart';
+import 'package:flutter_training/cookbook/list/multi_type_list_page.dart';
+import 'package:flutter_training/cookbook/list/swipe_item_page.dart';
+import 'package:flutter_training/fromOtherPlatform/add_remove_component_page.dart';
+import 'package:flutter_training/fromOtherPlatform/animate_widget_page.dart';
+import 'package:flutter_training/fromOtherPlatform/draw_on_canvas_page.dart';
+import 'package:flutter_training/fromOtherPlatform/fetch_api_page.dart';
+import 'package:flutter_training/fromOtherPlatform/form_input_page.dart';
+import 'package:flutter_training/fromOtherPlatform/listview_page.dart';
+import 'package:flutter_training/fromOtherPlatform/resource_page.dart';
+import 'package:flutter_training/fromOtherPlatform/route_argument_page.dart';
 
 import 'codelabs/favorite_word_list_page.dart';
 import 'codelabs/layout/stack_layout_page.dart';
@@ -103,84 +103,84 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: ListView(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         children: <Widget>[
           Text("Code Labs", style: Theme.of(context).textTheme.subtitle1,),
           ElevatedButton(
-            child: Text("Basic Flutter layout concepts"),
+            child: const Text("Basic Flutter layout concepts"),
             onPressed: () { _navigateTo("layout_basic"); },
           ),
           ElevatedButton(
-            child: Text("Write Your First Flutter App, part 1"),
+            child: const Text("Write Your First Flutter App, part 1"),
             onPressed: () { _navigateTo("first_app_1"); },
           ),
           ElevatedButton(
-            child: Text("Write Your First Flutter App, part 2"),
+            child: const Text("Write Your First Flutter App, part 2"),
             onPressed: () { _navigateTo("first_app_2"); },
           ),
           ElevatedButton(
-            child: Text("Building Beautiful UIs with Flutter"),
+            child: const Text("Building Beautiful UIs with Flutter"),
             onPressed: () { _navigateTo("build_beautiful_uis"); },
           ),
           ElevatedButton(
-            child: Text("Building a Cupertino app with Flutter"),
+            child: const Text("Building a Cupertino app with Flutter"),
             onPressed: () { _navigateTo(""); },
           ),
-          Divider(color: Colors.red, thickness: 3.0,),
+          const Divider(color: Colors.red, thickness: 3.0,),
 
           Text("From another platform", style: Theme.of(context).textTheme.subtitle1),
           ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("update_widget"); },
-              child: Text("Update Widget?")
+              child: const Text("Update Widget?")
           ),
           ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("add_remove_component"); },
-              child: Text("Add or remove a component?")
+              child: const Text("Add or remove a component?")
           ),
           ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("animate_widget"); },
-              child: Text("Animate Widget?")
+              child: const Text("Animate Widget?")
           ),
           ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("draw_on_canvas"); },
-              child: Text("Draw on Canvas?")
+              child: const Text("Draw on Canvas?")
           ),
           CustomButton("Custom Button"),
           ElevatedButton(
               onPressed: () {},
-              child: Text("(Not yet) Start Activity Android, XIB Ios, send and receive Data")
+              child: const Text("(Not yet) Start Activity Android, XIB Ios, send and receive Data")
           ),
           ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("route_argument"); },
-              child: Text("Send, Receive Route Arguments")
+              child: const Text("Send, Receive Route Arguments")
           ),
           ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("fetch_api"); },
-              child: Text("Async UI, Fetch API")
+              child: const Text("Async UI, Fetch API")
           ),
           ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("resource_page"); },
-              child: Text("Project Structure & Resource")
+              child: const Text("Project Structure & Resource")
           ),
           ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("lifecycle_page"); },
-              child: Text("Widget Life Cycle")
+              child: const Text("Widget Life Cycle")
           ),
           ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("gesture_detection"); },
-              child: Text("Gesture Detection")
+              child: const Text("Gesture Detection")
           ),
           ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("listview_page"); },
-              child: Text("ListView")
+              child: const Text("ListView")
           ),
           ElevatedButton(
               onPressed: () {Navigator.of(context).pushNamed("form_input"); },
-              child: Text("Form Input")
+              child: const Text("Form Input")
           ),
           ElevatedButton(
               onPressed: () { },
-              child: Text("(Not yet) Flutter plugins "
+              child: const Text("(Not yet) Flutter plugins "
                   "\n- GPS "
                   "\n- access the camera "
                   "\n- log in with Facebook "
@@ -190,7 +190,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   "\n- SQLite "
                   "")
           ),
-          Divider(color: Colors.red, thickness: 3.0,),
+          const Divider(color: Colors.red, thickness: 3.0,),
 
           Text("Cookbook", style: Theme.of(context).textTheme.subtitle1,),
           Text("Design", style: Theme.of(context).textTheme.headline6,),

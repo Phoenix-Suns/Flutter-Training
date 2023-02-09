@@ -13,7 +13,7 @@ class _ListViewPageState extends State<ListViewPage> {
   @override
   void initState() {
     super.initState();
-    for (int i = 0; i < 100; i++) {
+    for (var i = 0; i < 100; i++) {
       var item = "I'm $i";
       items.add(item);
     }
@@ -49,7 +49,7 @@ class _ListViewPageState extends State<ListViewPage> {
       onTap: () {
         setState(() {
           // Show Snackbar
-          Scaffold.of(context).hideCurrentSnackBar();
+          ScaffoldMessenger.of(context).hideCurrentSnackBar();
           ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(content: Text("Row $position",),)
           );

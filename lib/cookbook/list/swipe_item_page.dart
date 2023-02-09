@@ -81,7 +81,7 @@ class _SwipeItemPageState extends State<SwipeItemPage> {
       onTap: () {
         setState(() {
           // Show Snackbar
-          Scaffold.of(context).hideCurrentSnackBar();
+          ScaffoldMessenger.of(context).hideCurrentSnackBar();
           ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(content: Text("Row $position",),)
           );
